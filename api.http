@@ -1,0 +1,17 @@
+POST http://localhost:3000/user/criar
+Content-Type: application/json
+
+{
+    "nome": "Marcel",
+    "email": "marcel@hotmail.com",
+    "senha": "marcel123",
+    "telefone": 9292,
+    "cpf": "00.000.000-00"
+}
+###
+
+GET http://localhost:3000/user
+###
+
+
+

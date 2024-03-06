@@ -1,12 +1,12 @@
-POST http://localhost:3000/user/criar
+POST http://localhost:3000/user
 Content-Type: application/json
 
 {
-    "nome": "Marcel",
-    "email": "marcel@hotmail.com",
+    "nome": "SexoJunior",
+    "email": "sexoJ1unior@hotmail.com",
     "senha": "marcel123",
-    "telefone": 9292,
-    "cpf": "00.000.000-00"
+    "telefone": "67991336868",
+    "cpf": "12.000.000-00"
 }
 ###
 
@@ -14,4 +14,10 @@ GET http://localhost:3000/user
 ###
 
 
+POST http://localhost:3000/auth/login
+Content-Type: application/json
 
+{
+    "email": "marcel@hotmail.com",
+    "senha": "marcel123"
+}

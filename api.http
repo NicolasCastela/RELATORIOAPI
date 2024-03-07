@@ -2,11 +2,11 @@ POST http://localhost:3000/user
 Content-Type: application/json
 
 {
-    "nome": "SexoJunior",
-    "email": "sexoJ1unior@hotmail.com",
+    "nome": "nicolas",
+    "email": "nicolas@hotmail.com",
     "senha": "marcel123",
-    "telefone": "67991336868",
-    "cpf": "12.000.000-00"
+    "telefone": "67992336868",
+    "cpf": "22.000.000-00"
 }
 ###
 

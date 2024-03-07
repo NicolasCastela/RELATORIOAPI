@@ -14,7 +14,14 @@ export class CreateUserDto {
     @IsString()
     @IsNotEmpty()
     senha: string
-    telefone:  number
+
+     @Length(1, 11,
+         { message: 'O telefone deve ter no máximo 11 dígitos.' })
+    @IsNotEmpty()
+    telefone:  string
+
+    @IsString()
+    @IsNotEmpty()
     cpf: string
 
 }

@@ -1,20 +1,20 @@
-POST http://localhost:3000/user
+POST http://localhost:3030/user
 Content-Type: application/json
 
 {
-    "nome": "nicolas",
-    "email": "nicolas@hotmail.com",
+    "nome": "marcel",
+    "email": "test@hotmail.com",
     "senha": "marcel123",
     "telefone": "67992336868",
-    "cpf": "22.000.000-00"
+    "cpf": "008.000.000-00"
 }
 ###
 
-GET http://localhost:3000/user
+GET http://localhost:3030/user
 ###
 
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3030/auth/login
 Content-Type: application/json
 
 {

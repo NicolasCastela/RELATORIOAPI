@@ -13,15 +13,47 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model User {
-  id Int @default(autoincrement()) @id
-  email String @unique
-  nome String
-  senha String
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  nome     String
+  senha    String
   telefone String
-  cpf String @unique
+  cpf      String @unique
 
+  @@map("Users")
+}
 
-@@map("Users")
+model Cliente {
+  idClient  Int        @id @default(autoincrement())
+  nome      String
+  cpf       String     @unique
+  rg        String     @unique
+  telefone  String     @unique
+  processos Processos?
+
+  @@map("Cliente")
+}
+
+model Processos {
+  idProcesso           Int        @id @default(autoincrement())
+  detalhes             String?
+  tipoProcesso         String
+  NomeAuxiliarProcesso String?
+  quantidadeProcessos  Int        @default(0)
+  cliente              Cliente    @relation(fields: [idProcesso], references: [idClient])
+  pagamento            Pagamento?
+
+  @@map("Processos")
+}
+
+model Pagamento {
+  idPagamento      Int       @id @default(autoincrement())
+  pendencias       Boolean
+  formaDePagamento String
+  valor            Float
+  parcelas         Int
+  processos        Processos @relation(fields: [idPagamento], references: [idProcesso])
+
+  @@map("Pagamento")
 }
